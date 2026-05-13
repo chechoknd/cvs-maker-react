@@ -7,7 +7,8 @@ import { ExperienceTimeline } from '../components/ExperienceTimeline';
 import { ProjectCard } from '../components/ProjectCard';
 import { SectionHeading } from '../components/SectionHeading';
 import { SkillMatrix } from '../components/SkillMatrix';
-import { experiences, mainStack, profile, projects } from '../data/profile';
+import { mainStack, profile, projects } from '../data/profile';
+import { portfolioExperiences } from '../data/portfolioExperience';
 
 export function PortfolioPage() {
   return (
@@ -92,7 +93,7 @@ export function PortfolioPage() {
 
       <AnimatedSection className="mx-auto max-w-6xl px-5 py-16">
         <SectionHeading eyebrow="Experiencia" title="Software para operación empresarial" description="Experiencia combinando frontend, backend, datos, integraciones y soporte a despliegues en contextos corporativos." />
-        <ExperienceTimeline experiences={experiences} compact />
+        <ExperienceTimeline experiences={portfolioExperiences} compact />
       </AnimatedSection>
 
       <AnimatedSection className="bg-white py-16 dark:bg-zinc-950">

@@ -20,7 +20,9 @@ export function ExperienceTimeline({ experiences, compact = false }: ExperienceT
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-700 dark:text-blue-300">{experience.period}</p>
               <h3 className="mt-2 text-lg font-semibold text-stone-950 dark:text-white">{experience.role}</h3>
-              <p className="mt-1 text-sm font-medium text-stone-700 dark:text-zinc-300">{experience.company}</p>
+              <p className="mt-1 text-sm font-medium text-stone-700 dark:text-zinc-300">
+                {experience.location ? `${experience.company} · ${experience.location}` : experience.company}
+              </p>
             </div>
             <div className="flex flex-wrap gap-2 lg:max-w-sm lg:justify-end">
               {experience.technologies.slice(0, compact ? 4 : 7).map((technology, index) => (

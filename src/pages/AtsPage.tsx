@@ -1,5 +1,6 @@
 import { PrintButton } from '../components/PrintButton';
-import { experiences, mainStack, profile, projects, skillGroups } from '../data/profile';
+import { mainStack, profile, projects, skillGroups } from '../data/profile';
+import { atsExperiences } from '../data/portfolioExperience';
 
 export function AtsPage() {
   return (
@@ -36,11 +37,13 @@ export function AtsPage() {
       <section className="ats-section">
         <h2>Experiencia laboral</h2>
         <div className="space-y-7">
-          {experiences.map((experience) => (
+          {atsExperiences.map((experience) => (
             <article key={`${experience.company}-${experience.period}`} className="break-inside-avoid">
               <h3>{experience.role}</h3>
               <p className="font-semibold">{experience.company}</p>
-              <p className="text-sm">{experience.period} | {experience.location}</p>
+              <p className="text-sm">
+                {experience.location ? `${experience.period} | ${experience.location}` : experience.period}
+              </p>
               <ul>
                 {experience.highlights.map((highlight) => (
                   <li key={highlight}>{highlight}</li>

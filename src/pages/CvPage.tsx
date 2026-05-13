@@ -6,7 +6,8 @@ import { PrintButton } from '../components/PrintButton';
 import { ProjectCard } from '../components/ProjectCard';
 import { SectionHeading } from '../components/SectionHeading';
 import { SkillMatrix } from '../components/SkillMatrix';
-import { experiences, mainStack, profile, projects, timeline } from '../data/profile';
+import { mainStack, profile, projects, timeline } from '../data/profile';
+import { visualExperiences } from '../data/portfolioExperience';
 
 export function CvPage() {
   return (
@@ -84,7 +85,7 @@ export function CvPage() {
 
       <AnimatedSection className="mt-14">
         <SectionHeading title="Experiencia laboral" description="Trayectoria en desarrollo frontend, backend, datos, integraciones y soporte a despliegues para entornos empresariales." />
-        <ExperienceTimeline experiences={experiences} />
+        <ExperienceTimeline experiences={visualExperiences} />
       </AnimatedSection>
 
       <AnimatedSection className="mt-14">
