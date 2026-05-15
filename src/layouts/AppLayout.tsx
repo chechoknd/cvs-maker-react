@@ -5,6 +5,7 @@ const navItems = [
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'CV', href: '/cv' },
   { label: 'ATS', href: '/ats' },
+  { label: 'ATS Omar', href: '/ats-omar' },
 ];
 
 export function AppLayout() {

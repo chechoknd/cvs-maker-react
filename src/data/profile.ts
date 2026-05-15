@@ -92,7 +92,7 @@ export const experiences: Experience[] = [
   {
     company: "TCS - Tata Consultancy Services",
     role: "Desarrollador de Software",
-    period: "15 junio 2023 - 21 abril 2026",
+    period: "15 junio 2023 - Actual",
     location: "Colombia",
     highlights: [
       "Análisis y refinamiento de requerimientos en entornos empresariales, traduciendo necesidades funcionales en soluciones técnicas mantenibles.",
